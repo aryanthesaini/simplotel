@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Simplotel Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"></div>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Order</a></li>
+          <li><a href="/">Food</a></li>
+          <li><a href="/">Restaurant</a></li>
+          <li><a href="/">Testimonials</a></li>
+          <li><a href="/">Contact Us</a></li>
+        </ul>
+        <div class="call-cart">
+          <a href="" class="fa fa-solid fa-phone"></a>
+          <a href="" class="fa fa-solid fa-cart-shopping"></a>
+        </div>
+
+        <div class="toggle-btn">
+          <i onclick="toggle()" class="fa fa-solid fa-xmark"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Order</a></li>
+        <li><a href="/">Food</a></li>
+        <li><a href="/">Restaurant</a></li>
+        <li><a href="/">Testimonials</a></li>
+        <li><a href="/">Contact Us</a></li>
+      </div>
+    </header>
+
+    <script>
+      const toggle_btn = document.querySelector('.toggle-btn');
+      const toggle_btn_icon = document.querySelector('.toggle-btn i');
+      const dropdown_menu = document.querySelector('.dropdown_menu');
+
+      const toggle = function () {
+        dropdown_menu.classList.toggle('open');
+        const isOpen = dropdown_menu.classList.contains('open');
+        toggle_btn_icon.classList = isOpen
+          ? 'fa-solid fa-xmark'
+          : 'fa-solid fa-bars';
+      };
+    </script>
+  </body>
+</html>
